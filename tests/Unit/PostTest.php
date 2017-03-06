@@ -2,7 +2,7 @@
 
 namespace Tests\Unit;
 
-use App\ContentType;
+use App\CMS\ContentType;
 use App\Post;
 use Contentful\Delivery\Client;
 use Contentful\Delivery\Query;

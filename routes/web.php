@@ -11,5 +11,8 @@
 |
 */
 
-Route::get('/', 'ContentfulController@entries');
+Route::get('/', function() {
+    return view('test');
+});
+
 Route::post('/sync/posts', 'ContentfulController@syncPosts');
