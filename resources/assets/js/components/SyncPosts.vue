@@ -15,9 +15,15 @@
         methods: {
             sync() {
                 console.log('Syncing posts with Contentful...');
+
                 axios.post('/sync/posts')
-                    .then(res => console.log(res))
-                    .catch(err => console.error(err));
+                    .then(res => {
+                        console.log(res);
+                        window.location.reload();
+                    })
+                    .catch(err => {
+                        console.error(err)
+                    });
             }
         }
     }

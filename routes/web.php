@@ -11,8 +11,10 @@
 |
 */
 
+use App\Post;
+
 Route::get('/', function() {
-    return view('test');
+    return view('test', ['posts' => Post::all()]);
 });
 
 Route::post('/sync/posts', 'ContentfulController@syncPosts');
